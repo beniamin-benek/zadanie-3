@@ -6,6 +6,12 @@ class Main {
         drink1.drinkName = "herbata";
         drink1.price = 5;
         drink1.containsAlcohol = false;
+        String czyZawieraAlkohol; //tłumaczenie na polski
+
+        if (drink1.containsAlcohol)
+            czyZawieraAlkohol = "zawiera";
+        else
+            czyZawieraAlkohol = "brak";
 
         Ingredient ingredient1 = new Ingredient();
         ingredient1.ingredientName = "woda";
@@ -23,7 +29,7 @@ class Main {
         drink1.ingredient3 = ingredient3;
 
         System.out.println("INFORMACJE O NAPOJU:");
-        System.out.printf("Nazwa: %s\nCena: %d\nZawartość alkoholu: %s\n", drink1.drinkName, drink1.price, drink1.containsAlcohol);
+        System.out.printf("Nazwa: %s\nCena: %d\nZawartość alkoholu: %s\n", drink1.drinkName, drink1.price, czyZawieraAlkohol);
         System.out.printf("Składniki:\n- %s, %d ml\n", ingredient1.ingredientName, ingredient1.amount);
         System.out.printf("- %s, %d ml\n", ingredient2.ingredientName, ingredient2.amount);
         System.out.printf("- %s, %d ml\n", ingredient3.ingredientName, ingredient3.amount);
